@@ -1,0 +1,34 @@
+pacman -S wqy-zenhei ttf-fireflysung
+pacstrap /mnt base linux linux-firmware
+
+7.4 KDE5桌面
+首先安装plasma包
+
+#pacman -S plasma
+安装 kde下的控制台终端（我第一次就被这坑了进去半天找不到终端。。）
+
+# pacman -S konsole
+安装kde下的文件管理器
+
+# pacman -S dolphin
+如果要使用完整的kde应用程序的话，还需要安装kde-applications包
+
+（这个是KDE全家桶，会给你安装一些....你可能一辈子都用不上的东西）
+
+ #pacman -S kde-applications
+然后是登录管理器SDDM
+
+# pacman -S sddm
+将SDDM设置为开机自启动
+
+# systemctl enable sddm
+
+locale-gen
+
+echo LANG=en_US.UTF-8
+
+
+127.0.0.1    localhost.localdomain    localhost
+::1          localhost.localdomain    localhost
+127.0.1.1    Euphoria.localdomain     Euphoria
+

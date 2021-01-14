@@ -1,0 +1,23 @@
+. 安装MariaDb和其客户端工具
+
+sudo pacman -S mariadb mariadb-clients
+
+2. MariaDb的数据目录
+
+sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+
+3. 启动MariaDb
+
+sudo systemctl start mysqld
+
+4. 为root用户设置一个新密码
+
+mysqladmin -u root password '12345678' 
+
+5. 尝试登录MariaDb，如果登录成功，说明配置完成了
+
+mysql -uroot -p 12345678
+
+6. 如果想要MariaDb开机自动启动，那么就运行以下命令
+
+sudo systemctl enable mysqld
