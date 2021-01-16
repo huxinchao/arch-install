@@ -1,0 +1,15 @@
+pacman -S xf86-input-vmmouse xf86-video-vmware mesa 
+ 
+pacman -S open-vm-tools gtkmm3
+systemctl start vmtoolsd.service
+systemctl enable vmtoolsd.service
+
+systemctl start vmware-vmblock-fuse.service
+systemctl enable vmware-vmblock-fuse.service
+
+pacman -S gtkm gtk2
+
+/etc/mkinitcpio.conf
+
+MODULES=(vsock vmk_vsock_vmci_transport vmw_balloon vmw_vmci vmwgfx)
+mkinitcpio -p linux
