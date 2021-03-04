@@ -1,0 +1,2 @@
+ 
+前几天刚装arch+KDE，字体很清晰。说一下：这些字体必须安装，否则就没法看到清晰的字体：pacman -S noto-fonts noto-fonts-cjk noto-fonts-extra ttf-liberation装完后重启，效果就出来了。注意最好不要安装wqy-zenhei wqy-microhei，字体效果很差。
